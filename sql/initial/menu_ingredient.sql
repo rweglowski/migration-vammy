@@ -1,0 +1,23 @@
+CREATE TABLE `menu_ingredient` (
+  `IdIngredient` int NOT NULL AUTO_INCREMENT,
+  `IdClient` int NOT NULL DEFAULT '0',
+  `IdPlace` int NOT NULL DEFAULT '0',
+  `IdItem` int NOT NULL DEFAULT '0',
+  `IdSize` int NOT NULL DEFAULT '0',
+  `IdAddon` int NOT NULL DEFAULT '0',
+  `IngredientName` varchar(128) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL DEFAULT '',
+  `IngredientIsFixedPrice` tinyint(1) NOT NULL DEFAULT '0',
+  `IngredientIsFixedQty` tinyint(1) NOT NULL DEFAULT '0',
+  `IngredientIsPreselected` tinyint(1) NOT NULL DEFAULT '0',
+  `IngredientQty` decimal(12,4) NOT NULL DEFAULT '0.0000',
+  `rec_id` int NOT NULL DEFAULT '0',
+  `art_id` int NOT NULL DEFAULT '0',
+  `IngredientSizeQty` decimal(7,3) DEFAULT '0.000',
+  `IngredientSizePrice` decimal(7,2) DEFAULT '0.00',
+  `Created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `Modified` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`IdIngredient`) USING BTREE,
+  KEY `Idx_IdClient` (`IdClient`) USING BTREE,
+  KEY `Idx_IdPlace` (`IdPlace`) USING BTREE,
+  KEY `Idx_IdMenuItem` (`IdItem`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci

@@ -1,0 +1,22 @@
+CREATE TABLE `menu_item` (
+  `IdItem` int NOT NULL AUTO_INCREMENT,
+  `IdClient` int NOT NULL DEFAULT '-1',
+  `IdPlace` int NOT NULL DEFAULT '-1',
+  `IdGroup` int NOT NULL DEFAULT '-1',
+  `IdPriceList` int NOT NULL DEFAULT '-1',
+  `art_id` int NOT NULL DEFAULT '-1',
+  `ItemName` varchar(64) CHARACTER SET utf8 COLLATE utf8_polish_ci DEFAULT '',
+  `ItemDescrip` varchar(254) CHARACTER SET utf8 COLLATE utf8_polish_ci DEFAULT '',
+  `ItemCalories` smallint DEFAULT '0',
+  `ItemSellPrice` decimal(8,2) DEFAULT '0.00',
+  `ItemSellUnit` enum('kg','szt','l') CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'szt',
+  `ItemIsActive` tinyint(1) NOT NULL DEFAULT '1',
+  `ItemPic` varchar(48) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL DEFAULT '',
+  `ItemPicThumb` varchar(48) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL DEFAULT '',
+  `Created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `Modified` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`IdItem`) USING BTREE,
+  KEY `Idx_IdClient` (`IdClient`) USING BTREE,
+  KEY `Idx_IdPlace` (`IdPlace`) USING BTREE,
+  KEY `Idx_IdMenuGrp` (`IdGroup`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci

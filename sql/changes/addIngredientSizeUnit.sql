@@ -1,0 +1,1 @@
+ALTER TABLE menu_ingredient ADD COLUMN IngredientSizeUnit INT;

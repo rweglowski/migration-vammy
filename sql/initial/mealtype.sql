@@ -1,0 +1,8 @@
+CREATE TABLE `mealtype` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(128) NOT NULL DEFAULT '0',
+  `Descrip` varchar(128) DEFAULT '0',
+  `Created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `Modified` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

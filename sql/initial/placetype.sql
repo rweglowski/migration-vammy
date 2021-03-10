@@ -1,0 +1,8 @@
+CREATE TABLE `placetype` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(128) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL DEFAULT '0',
+  `Descrip` varchar(128) CHARACTER SET utf8 COLLATE utf8_polish_ci DEFAULT '0',
+  `Created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `Modified` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci

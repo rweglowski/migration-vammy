@@ -1,0 +1,21 @@
+CREATE TABLE `order` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `IdPlace` int NOT NULL DEFAULT '-1',
+  `IdClient` int NOT NULL DEFAULT '-1',
+  `IdUser` int NOT NULL DEFAULT '-1',
+  `IdStatus` tinyint NOT NULL DEFAULT '-1',
+  `IdOrder` int NOT NULL DEFAULT '-1',
+  `OrderNr` int NOT NULL DEFAULT '-1',
+  `OrderCreatedTime` datetime DEFAULT NULL,
+  `DeliveryTime` datetime DEFAULT NULL,
+  `IsFinished` tinyint NOT NULL DEFAULT '-1',
+  `Amount` decimal(6,2) NOT NULL DEFAULT '-1.00',
+  `Created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `Modified` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`),
+  KEY `Idx_IdClient` (`IdClient`),
+  KEY `Idx_IdUser` (`IdUser`),
+  KEY `Idx_IdStatus` (`IdStatus`),
+  KEY `Idx_IdOrder` (`IdOrder`),
+  KEY `Idx_IdLocation` (`IdPlace`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci
